@@ -237,10 +237,48 @@
             text-align: center;
         }
 
-        .hero-img img {
-            max-width: 68%;
+        /* .hero-img img {
+            width: 380px;
+            height: 380px;
+            border-radius: 50%;
+            object-fit: cover;
             animation: float 3s ease-in-out infinite;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        } */
+
+        .hero-img-wrapper {
+            position: relative;
+            width: 380px;
+            height: 380px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
+
+        .hero-img-wrapper::before {
+            content: "";
+            position: absolute;
+            width: 300px;
+            /* smaller than the image */
+            height: 300px;
+            background: rgba(37, 99, 235, 0.1);
+            /* light background color or use your theme */
+            border-radius: 50%;
+            z-index: 0;
+        }
+        
+
+        .hero-img img {
+            position: relative;
+            width: 380px;
+            height: 410px;
+            border-radius: 50%;
+            object-fit: cover;
+            animation: float 3s ease-in-out infinite;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+        }
+
 
         @keyframes float {
             0% {
@@ -315,17 +353,16 @@
         .about-img {
             flex: 1;
             text-align: center;
+            margin-left: 50px;
         }
 
         .about-img img {
-            max-width: 65%;
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            max-width: 100%;
         }
 
         .about-text {
             flex: 1;
-            padding-left: 50px;
+            padding-right: 50px;
         }
 
         .about-text h3 {
@@ -1119,8 +1156,11 @@
                     </div>
                 </div>
                 <div class="hero-img">
-                    <img src="/img/hiro.png" alt="Backend Developer">
+                    <div class="hero-img-wrapper">
+                        <img src="/img/hiro.png" alt="Backend Developer">
+                    </div>
                 </div>
+
             </div>
         </div>
     </section>
@@ -1155,7 +1195,7 @@
                     </div>
                 </div>
                 <div class="about-img">
-                    <img src="/img/hiro.png" alt="Raj Solanki">
+                    <img src="/img/vector.jpg" alt="Raj Solanki">
                 </div>
             </div>
         </div>
@@ -1323,8 +1363,9 @@
                             <span class="tech-tag">Nodemailer</span>
                         </div>
                         <div class="project-links">
-                            
-                            <a href="https://github.com/RajSolanki09/Scatch---A-premium-bag-Shop"><i class="fab fa-github"></i> Source Code</a>
+
+                            <a href="https://github.com/RajSolanki09/Scatch---A-premium-bag-Shop"><i
+                                    class="fab fa-github"></i> Source Code</a>
                         </div>
                     </div>
                 </div>
@@ -1343,8 +1384,9 @@
                             <span class="tech-tag">Node.js</span>
                         </div>
                         <div class="project-links">
-                            
-                            <a href="https://github.com/RajSolanki09/ModernChat---Real-time-Messaging"><i class="fab fa-github"></i> Source Code</a>
+
+                            <a href="https://github.com/RajSolanki09/ModernChat---Real-time-Messaging"><i
+                                    class="fab fa-github"></i> Source Code</a>
                         </div>
                     </div>
                 </div>
@@ -1364,8 +1406,9 @@
                             <span class="tech-tag">Node.js</span>
                         </div>
                         <div class="project-links">
-                            
-                            <a href="https://github.com/RajSolanki09/Device-Track-Project"><i class="fab fa-github"></i> Source Code</a>
+
+                            <a href="https://github.com/RajSolanki09/Device-Track-Project"><i class="fab fa-github"></i>
+                                Source Code</a>
                         </div>
                     </div>
                 </div>
@@ -1384,8 +1427,9 @@
                             <span class="tech-tag">MongoDB</span>
                         </div>
                         <div class="project-links">
-                            
-                            <a href="https://github.com/RajSolanki09/My-Blog-Project"><i class="fab fa-github"></i> Source Code</a>
+
+                            <a href="https://github.com/RajSolanki09/My-Blog-Project"><i class="fab fa-github"></i>
+                                Source Code</a>
                         </div>
                     </div>
                 </div>
@@ -1405,8 +1449,9 @@
                             <span class="tech-tag">HTML/CSS</span>
                         </div>
                         <div class="project-links">
-                            
-                            <a href="https://github.com/RajSolanki09/Main_JavaScript/tree/master/Weather%20App"><i class="fab fa-github"></i> Source Code</a>
+
+                            <a href="https://github.com/RajSolanki09/Main_JavaScript/tree/master/Weather%20App"><i
+                                    class="fab fa-github"></i> Source Code</a>
                         </div>
                     </div>
                 </div>
@@ -1418,15 +1463,17 @@
                     </div>
                     <div class="project-info">
                         <h3>Job-Tracker-Api</h3>
-                        <p>A task management application for users job with CRUD operations for managing daily tasks.</p>
+                        <p>A task management application for users job with CRUD operations for managing daily tasks.
+                        </p>
                         <div class="project-tech">
                             <span class="tech-tag">Node.js</span>
                             <span class="tech-tag">Express.js</span>
                             <span class="tech-tag">MongoDB</span>
                         </div>
                         <div class="project-links">
-                            
-                            <a href="https://github.com/RajSolanki09/Job-tracker-api"><i class="fab fa-github"></i> Source Code</a>
+
+                            <a href="https://github.com/RajSolanki09/Job-tracker-api"><i class="fab fa-github"></i>
+                                Source Code</a>
                         </div>
                     </div>
                 </div>
